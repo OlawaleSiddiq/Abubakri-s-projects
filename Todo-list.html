@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-list</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-size: 20px;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(112, 112, 111)
+        }
+
+        .container {
+            float: left;
+            box-shadow: 0 0 30px 5px black;
+            width: clamp(200PX, 500PX, 700PX);
+            height: clamp(500PX, 500PX, 700PX);
+            background-color: grey;
+            border: 2px solid black;
+            border-radius: 30px;
+            /* overflow-y: hidden */
+        }
+
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            margin: 10px auto;
+        }
+
+        input {
+            padding-left: 2px;
+            border-radius: 5px;
+            border: 1px solid black;
+            width: 70%;
+            margin: 20px 0 20px 30px;
+            height: 30px;
+            font-size: 15px;
+            font-weight: bolder;
+            background-color: rgb(224, 218, 218);
+        }
+
+        input:focus {
+            outline: 2px solid rgb(66, 66, 66);
+        }
+
+        li:nth-child(odd) {
+            background-color: rgb(63, 61, 61)
+        }
+
+        li {
+            list-style-type: none;
+            padding: 10px;
+            color: white;
+            user-select: none;
+        }
+
+        button {
+            background-color: rgb(129, 36, 2);
+            margin: 0;
+            padding: 5px;
+            color: white;
+            font-size: 15px;
+            font-weight: bolder;
+            border-radius: 5px;
+        }
+
+        li.checked {
+            background: rgb(12, 109, 3);
+            text-decoration: line-through;
+        }
+        ul{
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+            height: 320px;
+        }
+
+        .close {
+            float: right;
+            color: rgb(247, 10, 10);
+            padding: 0 5px 0 5px;
+            text-shadow: 0px 0px 3px  rgb(10, 10, 10);
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Todo-list</h1>
+        <input id="myinput" type="text">
+        <button id="addbtn">Add-List</button>
+        <ul id="ul">
+            <li>Hello world</li>
+            <li>How are you doing</li>
+            <li>Your faces are blooming</li>
+            <li>Hope you enjoy coding, coz i do</li>
+        </ul>
+    </div>
+    </div>
+    <script src="todo-list.js"></script>
+</body>
+
+</html>
