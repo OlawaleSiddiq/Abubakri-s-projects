@@ -32,23 +32,27 @@ function newElement() {
         document.getElementById('ul').appendChild(nodelist)
     }
     document.getElementById('myinput').value = "";
+    document.getElementById('myinput').focus();
+
 
     let span = document.createElement('SPAN');
     let t = document.createTextNode('x')
     span.className = 'close'
     span.appendChild(t)
     nodelist.appendChild(span)
+    
 
     for (let i = 0; i < close.length; i++) {
         close[i].onclick = function () {
-            let div = this.parentElement
-            div.style.display = 'none'
+            this.parentElement.remove()
+            // div.style.display = 'none'
         }
     }
 }
+
 var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
+list.addEventListener('click', function (ev) {
+    if (ev.target.tagName === 'LI') {
+        ev.target.classList.toggle('checked');
+    }
+});
