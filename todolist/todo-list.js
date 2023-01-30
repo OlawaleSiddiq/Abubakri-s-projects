@@ -17,7 +17,6 @@ for (let i = 0; i < close.length; i++) {
 }
 
 
-
 const addList = document.getElementById('addbtn');
 addList.addEventListener('click', newElement)
 
@@ -45,7 +44,6 @@ function newElement() {
     for (let i = 0; i < close.length; i++) {
         close[i].onclick = function () {
             this.parentElement.remove()
-            // div.style.display = 'none'
         }
     }
 }

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bankapp.css">
+    <script src="./newbankapp.js" defer ></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class=" cont1" id="containerOne">
+            <form id="loginForm" class="page">
+                <h1>
+                    WELLCOME TO ABUBAKRI'S MICROFINANCE BANK.
+                </h1>
+                <p class="p1">
+                    Please enter your password to login to your account. <br>
+                    or <br> click on the 'signup' button below to bank
+                    with us.
+                </p>
+                <label for="email">Email:
+                    <input required type="email" name="email" id="emailInput">
+                </label>
+                <label for="password">Password:
+                    <input required type="password" name="password" id="PasswordInput">
+                </label>
+                <button id="loginBtn" class="login">login</button>
+                <span onclick="signin()" class="signup" id="signupBtn">Signup</span>
+            </form>
+
+        </div>
+
+        <div class="cont2" id="containerTwo">
+            <form class="page">
+                <h2>
+                    Please enter your signup details.
+                </h2>
+                <label for="fullname">FullName:
+                    <input required type="text" id="fullName" name="fullName" placeholder="Fullname">
+                </label>
+
+                <label for="age">Age:
+                    <input required type="number" id="age" placeholder="Age" min="18" max="120">
+                </label>
+                <label for="email">Email:
+                     <input type="email" name="email" required id="email" placeholder="Enter a valid email">
+                </label>
+                <label for="phone_number">Phone number:
+                    <input type="phone" required id="phone" placeholder="+234:">
+                </label>
+                <label for="password">Password:
+                    <input type="password" id="password" name="password" placeholder="Password" name="password"
+                        required>
+                </label>
+                <div class="radiodiv">
+                    <label for="gender">
+                        Please choose your gender:
+                    </label>
+                    <label for="gender">Male:
+                        <input required class="radio1" type="radio" value="male" id="radioMale" name="Male_female">
+                    </label>
+                    <label for="gender">Female:
+                        <input required class="radio2" type="radio" value="Female" id="radiofemale" name="Male_female">
+                    </label>
+                </div>
+                <button type="submit" id="submitBtn" class="submitbtn">Submit</button>
+                <button type="reset" id="resetBtn" class="reset">Reset</button>
+            </form>
+        </div>
+
+        <div class="cont3" id="containerThree">
+            <section class="page" id="page3">
+                <h3 class="m-b">
+                    Enter transaction amount and click on transaction type button.
+                </h3>
+                <div class="cust_details" id="detailsDisplay">
+                    <p class="cust_name">Dear customer,</p>
+                    <p>
+                        Your total account balance is #<span class="balanceDisplay" id="balanceDisplay">0</span>
+                    </p>
+                </div>
+
+                <div class="trans_value">
+                    <input type="number" id="transactionInput">
+                </div>
+
+                <div class="transaction_btns" id="transactionBtns">
+                    <button class="trans_btn" id="deposit">DEPOSIT</button>
+                    <button class="trans_btn" id="withdraw">WITHDRAW</button>
+                    <button class="trans_btn" id="transfer">TRANSFER</button>
+                </div>
+            </section>
+        </div>
+
+    </div>
+</body>
+
+</html>

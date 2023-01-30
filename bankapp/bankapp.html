@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <div class=" cont1" id="cont1">
-            <form class="page">
+            <form id="logform" class="page">
                 <h1>
                     WELLCOME TO ABUBAKRI'S MICROFINANCE BANK.
                 </h1>
@@ -28,7 +28,7 @@
                 <label for="password">Password:
                     <input required type="password" name="password" id="Passwordinput">
                 </label>
-                <button class="login" onclick="login()">login</button>
+                <button class="login">login</button>
                 <span onclick="signin()" class="signup" id="signup">Signup</span>
             </form>
 
@@ -67,9 +67,10 @@
                         <input required class="radio2" type="radio" value="Female" id="female" name="Male_female">
                     </label>
                 </div>
-                <button type="submit" onclick="submit()" class="submitbtn">Submit</button>
+                <button type="submit" onsubmit="submit()" class="submitbtn">Submit</button>
                 <button type="reset" class="reset">Reset</button>
             </form>
+            
         </div>
 
         <div class="cont3" id="cont3">

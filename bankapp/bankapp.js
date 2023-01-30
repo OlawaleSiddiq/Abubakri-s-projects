@@ -1,20 +1,19 @@
 const transInput = document.getElementById("transInput")
 const person = {
     name: "",
-    balance: "",
+    balance: 0.00,
     password: 0000,
     email: "js@gmail.com",
-
 }
 
 function depos() {
-    let amnt = transInput.value
-    let total = Number(person.balance) + Number(amnt)
-    person.balance = total
-    document.getElementById("balanceDisplay").innerText = total + ".00"
-    transInput.value = ""
-    transInput.focus()
-}
+    let amnt = Number(transInput.value)
+        let total = Number(person.balance) + Number(amnt)
+        person.balance = total
+        document.getElementById("balanceDisplay").innerText = total + ".00"
+        transInput.value = ""
+        transInput.focus()
+    }
 
 function withdra() {
     let cash = transInput.value
@@ -26,15 +25,9 @@ function withdra() {
 
 }
 
-function login() {
-    // var pass = document.getElementById('passwordinput').value;
-    // var Email = document.getElementById('emailinput').value;
-    // if () {
+document.querySelector('.login').onclick = function () {
     document.querySelector(".cont1").style.display = "none"
     document.querySelector(".cont3").style.display = "block"
-    // } else {
-    //     alert("incorrect login details")
-    // }
 }
 
 function signin() {

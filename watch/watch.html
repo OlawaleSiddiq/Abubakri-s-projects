@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-3</title>
+    <script defer src="watch.js"></script>
+    <style>
+        *,
+        *::after,
+        *::before {
+            border-radius: 50px;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: pointer;
+            font-weight: 700;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(167, 139, 105);
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            user-select: none;
+            text-align: center;
+            padding: 50px 10px;
+            overflow: hidden;
+            min-width: 400px;
+            width: 50vw;
+            min-height: 80%;
+            background-color: rgb(70, 49, 23);
+            color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 0 30px 2px rgb(26, 14, 1);
+        }
+
+        h2 {
+            margin: 20px auto;
+            text-align: center;
+            padding: 5px;
+            min-width: 70%;
+            height: 50%;
+            background-color: rgb(139, 95, 37);
+            box-shadow: 0 0 50px 0px rgb(139, 95, 37);
+        }
+
+        h1,
+        h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+
+        }
+
+        button {
+            background-color: rgb(139, 100, 40);
+            padding: 5px;
+            font-size: 30px;
+            margin: 10px 10px;
+            box-shadow: 3px 3px 3px;
+        }
+
+        div {
+            border: 1px solid grey;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>ABUBAKRI`s DIGITAL CLOCK</h1>
+        <h2>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <span id="hours">00</span>
+                            <span id="minutes">:00:</span>
+                            <span id="seconds">00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </h2>
+        <span class="btn">
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <!-- <button id="reset">Reset</button> -->
+        </span>
+    </div>
+</body>
+
+</html>
