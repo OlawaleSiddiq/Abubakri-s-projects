@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-size: 20px;
+            font-weight: 600;
+            border-radius: 15px;
+            color: rgb(14, 13, 13);
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        h1 {
+            margin-top: 50px;
+            font-size: 40px;
+            font-weight: 900;
+            text-align: center;
+
+        }
+
+        .container {
+            height: 80vh;
+            min-width: 200px;
+            width: 500px;
+            background-color: rgb(196, 108, 7);
+            cursor: auto;
+            user-select: none;
+            box-shadow: 0 0 30px 2px rgb(109, 107, 107);
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(73, 40, 3)
+        }
+
+        div input {
+            width: 300px;
+            height: 30px;
+            margin: 20px 30px;
+            background-color: rgb(206, 143, 8);
+            color: black;
+            padding: 5px;
+        }
+
+        li:nth-child(odd) {
+            color: rgb(197, 192, 192);
+            background-color: rgb(155, 91, 8)
+        }
+
+        button {
+            width: 40px;
+            background-color: transparent;
+            font-size: 17px;
+        }
+
+        li {
+            height: 35px;
+            padding: 5px 20px;
+            list-style-type: none;
+            box-shadow: 0 0 10px 1px;
+        }
+
+        .checked {
+            background-color: rgb(4, 83, 4) !important;
+            text-decoration: line-through;
+            color: white
+        }
+
+        span {
+            float: right;
+            color: rgb(8, 8, 8);
+        }
+        #add{
+            font-size: 20px;
+            padding: 5px;
+            width: fit-content;
+        }
+
+        ul {
+            height: 270px;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>ABUBAKRi's TODO-LIST</h1>
+        <div class="input">
+            <input id="myinput" type="text">
+            <button id="add" onclick="newElement()">Add-List</button>
+        </div>
+        <ul id="my_ul">
+            <li>first list</li>
+            <li class="checked">second list</li>
+            <li>third list</li>
+            <li>fourth list</li>
+        </ul>
+    </div>
+    <script src="secondtodo.js"></script>
+</body>
+
+</html>
