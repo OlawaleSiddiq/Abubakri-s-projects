@@ -1,0 +1,30 @@
+body {
+  font-family: "Arial", sans-serif;
+}
+
+section {
+  text-align: center;
+}
+
+.game--container {
+  background-color: goldenrod !important;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 306px;
+  margin: 50px auto;
+  box-shadow: 0 0 60px 10px black;
+}
+.cell:nth-child(even) {
+  background-color: orangered;
+}
+
+.cell {
+  font-family: "Permanent Marker", cursive;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 0 1px #333333;
+  border: 1px solid #333333;
+  cursor: pointer;
+  line-height: 100px;
+  font-size: 60px;
+}

@@ -22,30 +22,62 @@ body {
 }
 .btns {
   display: grid;
-  justify-content: center;
-  align-content: center;
   grid-template-columns: repeat(4, 80px);
   grid-template-rows: minmax(80px, auto) repeat(5, 80px);
 }
-.btn {
+.btn,
+#ac,
+#Del,
+#equals,
+.operand {
   cursor: pointer;
   font-size: 2rem;
   border: 1px solid white;
   background-color: rgba(255, 255, 255, 0.7);
   outline: none;
 }
+
+.operand:hover {
+  background-color: rgb(248, 248, 248, 0.9);
+}
+
+.Del:hover {
+  background-color: rgb(248, 248, 248, 0.9);
+}
+.equals:hover {
+  background-color: rgba(153, 29, 29, 0.9);
+}
+.clear:hover {
+  background-color: rgb(248, 248, 248, 0.9);
+}
+.btn:hover {
+  background-color: rgb(248, 248, 248, 0.9);
+}
+
+.btn:active {
+  background-color: grey;
+}
+#equals:active {
+  background-color: grey;
+}
 .spanTwo {
   grid-column: span 2;
 }
 .display {
+  word-wrap: break-word;
+  word-break: break-all;
+  grid-column: 1/-1;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-end;
   padding: 10px;
   font-size: 20px;
-  width: 320px;
   color: white;
   background-color: rgb(14, 0, 0, 0.9);
   min-height: 80px;
+}
+.displayTwo {
+  font-size: 25px;
+  color: whitesmoke;
 }
