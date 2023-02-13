@@ -35,7 +35,7 @@ operands.forEach(button => {
             calculate()
             displayTwo.textContent += '+'
             return
-        }
+        } 
         if (displayTwo.textContent !== "" && button.textContent == '-') {
             calculate()
             displayTwo.textContent += '-'

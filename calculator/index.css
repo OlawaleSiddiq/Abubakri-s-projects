@@ -10,7 +10,7 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, rgb(39, 39, 240), aqua);
+  background: linear-gradient(to right, rgb(160, 132, 8), rgb(173, 81, 6));
 }
 .container {
   padding-top: 30px;
@@ -55,10 +55,10 @@ body {
 }
 
 .btn:active {
-  background-color: grey;
+  background-color: rgb(190, 111, 6);
 }
 #equals:active {
-  background-color: grey;
+  background-color: rgb(190, 132, 5);
 }
 .spanTwo {
   grid-column: span 2;
