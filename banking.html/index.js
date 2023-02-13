@@ -18,10 +18,9 @@ window.onload = () => {
     }
 
 }
-
-let logemail = document.getElementById('emailInput').value.toUpperCase()
-let logpassword = document.getElementById('passwordInput').value.toUpperCase()
 function login() {
+    let logemail = document.getElementById('emailInput').value.toUpperCase()
+    let logpassword = document.getElementById('passwordInput').value.toUpperCase()
     for (let i = 0; i < users.length; i++) {
         if (logemail !== users[i].uEmail || logpassword !== users[i].uPassword) {
             alert("Incorrect login details, please retry and if you are yet to register, click on the 'signup' below");
@@ -95,7 +94,7 @@ function deposit() {
     };
     total = currentUser.uBalance + Number(transInput.value)
     currentUser.uBalance = total
-    alert('you successfully deposited ' + transInput.value + ' into your account')
+    alert('you successfully deposited #' + transInput.value + ' into your account')
     document.getElementById("balanceDisplay").innerText = total + ".00"
     transInput.value = ""
     transInput.focus()
@@ -109,6 +108,7 @@ function withdraw() {
     };
     total = currentUser.uBalance - Number(transInput.value)
     currentUser.uBalance = total
+    alert('you successfully withraw #' + transInput.value + ' from your account')
     document.getElementById("balanceDisplay").innerText = total + ".00"
     transInput.value = ""
     transInput.focus()
@@ -120,6 +120,7 @@ function transfer() {
     let accountInput = document.createElement('input');
     let accountLabel = document.createElement('label')
     accountInput.classList = 'inputs'
+    accountInput.id = 'receivingAccount'
     accountInput.type = 'number'
     accountLabel.innerText = 'Enter account'
     accountLabel.appendChild(accountInput)
@@ -152,7 +153,7 @@ function transfer() {
         }
         total = currentUser.uBalance - Number(gift.value)
         currentUser.uBalance = total
-        alert('Transfer successful')
+        alert('You successfully Transfered #' + gift.value + ' to your beneficiary')
         document.getElementById("balanceDisplay").innerText = total + ".00"
         transInput.focus()
         this.parentElement.remove()
