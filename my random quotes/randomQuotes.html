@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="randomQuotes.css">
+    <script src="randomQuotes.js" defer></script>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            font-size: 60px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+            text-shadow: 2px 2px 10px rgb(253, 253, 253);
+            color: rgb(253, 252, 252);
+            text-shadow: 2px 2px 10px black;
+        }
+
+        .quotesDisplay::before,
+        .quotesDisplay::after {
+            content: '"';
+        }
+        .source::before,
+        .source::after {
+            content: "'";
+            color: rgb(172, 82, 9)
+        }
+
+        .source {
+            color: rgb(5, 5, 5);
+            text-shadow: 2px 2px 10px rgb(255, 254, 254);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="quotesDisplay">Love all, trust a few, do wrong to none.</div>
+    <div class="source">William Shakespeare</div>
+</body>
+
+</html>

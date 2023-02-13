@@ -1,0 +1,73 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, .restartDiv {
+  font-size: 40px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: normal;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(141, 177, 141);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.game-container {
+  display: grid;
+  width: 300px;
+  user-select: none;
+  cursor: pointer;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  align-content: center;
+  box-shadow: 2px 2px 50px 20px black;
+}
+.cell {
+    font-size: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(104, 126, 104);
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+}
+.cell:nth-child(even) {
+  background-color: rgb(33, 51, 33);
+}
+.displaydiv{
+height: 80px;
+margin-top: 40px;
+font-size: 70px;
+}
+#restartDiv{
+  color: white;
+ background-color: rgb(12, 12, 12, .8);
+  font-size: 70px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 900;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+button{
+font-size: 30px;
+padding: 10px;
+background-color: rgb(92, 86, 86);
+color: black;
+border-radius: 10px;  
+}
+button:hover{
+  background-color: black;
+  outline: white;
+  color: white
+}

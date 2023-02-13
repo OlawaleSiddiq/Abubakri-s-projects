@@ -26,7 +26,6 @@ document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click'
 function handleCellClick(e) {
     const clickedCell = e.target;
     const clickedCellIndex = parseInt(clickedCell.getAttribute('data-cell-index'));
-console.log(clickedCellIndex)
     if (gameState[clickedCellIndex] !== "" || !gameActive) {
         return;
     }
