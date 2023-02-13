@@ -23,10 +23,7 @@ let logemail = document.getElementById('emailInput').value.toUpperCase()
 let logpassword = document.getElementById('passwordInput').value.toUpperCase()
 function login() {
     for (let i = 0; i < users.length; i++) {
-        if (logemail === "" && logpassword === "") {
-            alert('Please input your details')
-            return
-        }else if (logemail !== users[i].uEmail || logpassword !== users[i].uPassword) {
+        if (logemail !== users[i].uEmail || logpassword !== users[i].uPassword) {
             alert("Incorrect login details, please retry and if you are yet to register, click on the 'signup' below");
             return
         } else {
