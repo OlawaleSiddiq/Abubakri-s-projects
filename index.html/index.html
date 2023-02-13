@@ -368,7 +368,7 @@
             if (transInput.value === "") return
             total = currentUser.uBalance - Number(transInput.value)
             currentUser.uBalance = total
-            document.getElementById("balanceDisplay").innerText = '#' + total + ".00"
+            document.getElementById("balanceDisplay").innerText = total + ".00"
             transInput.value = ""
             transInput.focus()
         }
@@ -411,9 +411,11 @@
                 }
                 total = currentUser.uBalance - Number(gift.value)
                 currentUser.uBalance = total
+                alert('Transfer successful')
                 document.getElementById("balanceDisplay").innerText = total + ".00"
                 transInput.focus()
                 this.parentElement.remove()
+                setTimeout('this', 1000)
             }
         }
     </script>
