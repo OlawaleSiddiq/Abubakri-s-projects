@@ -94,7 +94,7 @@ function deposit() {
     };
     total = currentUser.uBalance + Number(transInput.value)
     currentUser.uBalance = total
-    alert('you successfully deposited #' + transInput.value + ' into your account')
+    alert('you successfully deposited #' + transInput.value +  ".00"+' into your account')
     document.getElementById("balanceDisplay").innerText = total + ".00"
     transInput.value = ""
     transInput.focus()
@@ -108,7 +108,7 @@ function withdraw() {
     };
     total = currentUser.uBalance - Number(transInput.value)
     currentUser.uBalance = total
-    alert('you successfully withraw #' + transInput.value + ' from your account')
+    alert('you successfully withraw #' + transInput.value +  ".00"+' from your account')
     document.getElementById("balanceDisplay").innerText = total + ".00"
     transInput.value = ""
     transInput.focus()
@@ -122,12 +122,12 @@ function transfer() {
     accountInput.classList = 'inputs'
     accountInput.id = 'receivingAccount'
     accountInput.type = 'number'
-    accountLabel.innerText = 'Enter account'
+    accountLabel.innerText = 'Account'
     accountLabel.appendChild(accountInput)
     let amountInput = document.createElement('input');
     amountInput.id = 'transferInput'
     let amountLabel = document.createElement('label')
-    amountLabel.innerText = 'Enter amount'
+    amountLabel.innerText = 'Amount'
     amountLabel.appendChild(amountInput)
     amountInput.classList = 'inputs'
     amountInput.type = 'number'
@@ -153,10 +153,9 @@ function transfer() {
         }
         total = currentUser.uBalance - Number(gift.value)
         currentUser.uBalance = total
-        alert('You successfully Transfered #' + gift.value + ' to your beneficiary')
+        alert('You successfully Transfered #' + gift.value + ".00"+' to your beneficiary')
         document.getElementById("balanceDisplay").innerText = total + ".00"
         transInput.focus()
         this.parentElement.remove()
-        setTimeout('this', 1000)
     }
 }
