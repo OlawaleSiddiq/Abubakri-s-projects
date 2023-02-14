@@ -129,8 +129,10 @@ input:hover {
 }
 
 .transpage {
+  word-wrap: break-word;
+  word-break: break-all;
   width: 400px;
-  min-width: 320;
+  min-width: 320px;
   height: 70%;
   background-color: rgb(25, 25, 59);
   border-radius: 20%;
