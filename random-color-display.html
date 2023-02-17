@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing</title>
+    <style>
+        body {
+            display: flex;
+            background-color: goldenrod;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .color {
+            background-color: red;
+        }
+
+        div:not(.container) {
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            color: white;
+            width: 100px;
+            height: 100px;
+            background-color: grey;
+            border: 1px solid black;
+        }
+        .container{
+            width: fit-content;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+            border-radius: 50px;
+            background-color:orangered;
+            box-shadow: 0 0 30px 30px rgb(123, 33, 240);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>hello</div>
+        <div>world</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <script>
+        let divs = document.querySelectorAll('div')
+        let div = document.querySelector('div')
+
+        divs.forEach(cell => { cell.addEventListener('click', col, { once: true }) })
+
+        function changeBoxColor() {
+            document.querySelector('div:nth-child(1):not(.container)').style.backgroundColor = randomNumber()
+            document.querySelector('div:nth-child(3)').style.backgroundColor = randomNumber()
+            document.querySelector('div:nth-child(5)').style.backgroundColor = randomNumber()
+            document.querySelector('div:nth-child(7)').style.backgroundColor = randomNumber()
+            document.querySelector('div:nth-child(9)').style.backgroundColor = randomNumber()
+            document.querySelector('div:nth-child(1):not(.container)').style.color = randomNumber()
+            document.querySelector('div:nth-child(3)').style.color = randomNumber()
+            document.querySelector('div:nth-child(5)').style.color = randomNumber()
+            document.querySelector('div:nth-child(7)').style.color = randomNumber()
+            document.querySelector('div:nth-child(9)').style.color = randomNumber()
+        }
+        setInterval(changeBoxColor, 500)
+
+        function changeBoxColor2() {
+            let random = Math.floor(Math.random * 9)
+            document.querySelector('div:nth-child(2)').style.backgroundColor = randomNumber()
+            document.querySelector('div:nth-child(4)').style.backgroundColor = randomNumber()
+            document.querySelector('div:nth-child(6)').style.backgroundColor = randomNumber()
+            document.querySelector('div:nth-child(8)').style.backgroundColor = randomNumber()
+        }
+        setInterval(changeBoxColor2, 700)
+
+        function randomNumber() {
+            return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
+        }
+        function col(e) {
+            e.target.style.backgroundColor = randomNumber()
+        }
+
+
+    </script>
+</body>
+
+</html>

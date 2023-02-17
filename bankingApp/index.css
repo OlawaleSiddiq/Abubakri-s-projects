@@ -1,7 +1,6 @@
 *::after,
 *::before,
 * {
-  /* overflow: hidden; */
   margin: 0;
   color: rgb(167, 159, 159);
   padding: 0;
@@ -12,6 +11,7 @@
 }
 
 body {
+  position: fixed;
   height: 100vh;
   width: 100vw;
   background-color: rgb(1, 1, 31);
@@ -68,7 +68,7 @@ h3 {
   background-size: cover;
   position: absolute;
   height: 100vh;
-  width: clamp(300px, 400px, 500px);
+  width: clamp(300px, 45vw, 500px);
 }
 
 .cont3,
@@ -131,8 +131,8 @@ input:hover {
 
 .transpage {
   word-wrap: break-word;
-  width: clamp(300px, 350px, 500px);
-  height: 70%;
+  width: inherit;
+  height: 85%;
   background-color: rgb(25, 25, 59);
   border-radius: 20%;
   box-shadow: 0 0 20px rgb(184, 179, 177) inset;
