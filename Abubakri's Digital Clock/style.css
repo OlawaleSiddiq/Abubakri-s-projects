@@ -1,0 +1,116 @@
+*,
+*::after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(240, 159, 38);
+  box-shadow: 0 0 30px 10px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clockContainer {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  position: relative;
+  border: 5px solid black;
+  box-shadow: 0 0 30px 10px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 400px;
+  min-height: 400px;
+  background: url(../bankingApp/index.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: goldenrod;
+  background-blend-mode: soft-light;
+}
+
+.round {
+  z-index: 15;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(136, 14, 14);
+  border-radius: 50%;
+  position: absolute;
+}
+.hand{
+  --rotate:0;
+  position: absolute;
+  bottom: 50%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform:rotate(calc(var(--rotate) * 1deg));
+  transform-origin: bottom;
+
+}
+
+.secondHand {
+  background-color: rgb(155, 8, 8);
+  width: 3px;
+  height: 48%;
+  z-index: 5;
+}
+
+.minuteHand {
+  background-color: rgb(8, 8, 8);
+  width: 4px;
+  height: 40%;
+  z-index: 4;
+}
+.hourHand {
+  background-color: rgb(7, 7, 7);
+  width: 7px;
+  height: 30%;
+  z-index: 2;
+}
+.number {
+  --rotate:0;
+  position: absolute;
+  font-size: 30px;
+  font-weight: 900;
+  min-width: 400px;
+  min-height: 400px;
+  text-align: center;
+  transform: rotate(var(--rotate));
+}
+.number1 {
+  --rotate: 30deg;
+}
+.number2 {
+  --rotate: 60deg;
+}
+.number3 {
+  --rotate: 90deg;
+}
+.number4 {
+  --rotate: 120deg;
+}
+.number5 {
+  --rotate: 150deg;
+}
+.number6 {
+  --rotate: 180deg;
+}
+.number7 {
+  --rotate: 210deg;
+}
+.number8 {
+  --rotate: 240deg;
+}
+.number9 {
+  --rotate: 270deg;
+}
+.number10 {
+  --rotate: 300deg;
+}
+.number11 {
+  --rotate: 330deg;
+}
