@@ -41,15 +41,14 @@ body {
   border-radius: 50%;
   position: absolute;
 }
-.hand{
-  --rotate:0;
+.hand {
+  --rotate: 0;
   position: absolute;
   bottom: 50%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  transform:rotate(calc(var(--rotate) * 1deg));
+  transform: rotate(calc(var(--rotate) * 1deg));
   transform-origin: bottom;
-
 }
 
 .secondHand {
@@ -72,7 +71,7 @@ body {
   z-index: 2;
 }
 .number {
-  --rotate:0;
+  --rotate: 0;
   position: absolute;
   font-size: 30px;
   font-weight: 900;
@@ -116,7 +115,8 @@ body {
 }
 .date {
   transform: translatey(50px);
-font-size: large;
-background-color: goldenrod;
-
+  font-size: large;
+  background-color: goldenrod;
+  padding: 0 3px;
+  border-radius: 20px;
 }
