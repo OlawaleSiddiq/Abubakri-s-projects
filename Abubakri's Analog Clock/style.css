@@ -79,8 +79,8 @@ body {
   position: absolute;
   font-size: 30px;
   font-weight: 900;
-  min-width: 400px;
-  min-height: 400px;
+  width: 400px;
+  height: 400px;
   text-align: center;
   transform: rotate(var(--rotate));
 }
