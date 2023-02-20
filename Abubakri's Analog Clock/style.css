@@ -31,12 +31,6 @@ body {
   background-color: goldenrod;
   background-blend-mode: soft-light;
 }
-@media (max-width: 400px) {
-  .clockContainer, .number {
-    width: 90vw;
-    height: 90vw;
-  }
-}
 .round {
   z-index: 15;
   width: 15px;
@@ -124,3 +118,14 @@ body {
   padding: 0 3px;
   border-radius: 20px;
 }
+
+  @media (max-width: 600px) {
+    .clockContainer {
+      width: 90vw;
+      height: 90vw;
+    }
+    .number{
+      width: 90vw;
+      height: 90vw;
+    }
+  }
