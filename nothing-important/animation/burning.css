@@ -1,0 +1,14 @@
+body {
+  background-image:url(./fire-51.gif);
+  background-size: cover;
+  background-color: black;
+}
+.text {
+  background-image: url(./fire-51.gif);
+  background-clip: text;
+  color: transparent;
+  font-size: 80px;
+  font-weight: bold;
+  font-family: serif;
+  text-align: center;
+}

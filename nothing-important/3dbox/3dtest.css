@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.border{
+  background-image: url(./badwaslogo.jpg);
+  background-size: 600px;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 600px;
+  border: 3px solid rgb(49, 49, 102);
+}
+
+body {
+  height: 100%;
+  border: 2px solid black;
+  width: 100%;
+  background-image:url(./WALLPAPER.png);
+  background-size:cover;
+  position: absolute;
+  perspective: 50em;
+  perspective-origin: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cube {
+  /* margin-top: 50px; */
+  font-size: 40px;
+  font-weight: 900;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform-style: preserve-3d;
+  box-sizing: border-box;
+  animation: cube 8s linear infinite forwards;
+}
+@keyframes cube {
+  100% {
+    transform: rotatey(360deg) rotatex(360deg);
+  }
+}
+.top,
+.bottom,
+.front,
+.back,
+.right,
+.left {
+  padding: 70px 40px;
+  opacity: 50%;
+  width: 200px;
+  height: 200px;
+  background-image:url(./badwassign.jpg);
+  background-size: 200px;
+  background-repeat: no-repeat;
+  font-size: 25px;
+  position: absolute;
+  border: 2px solid black;
+}
+.back {
+  transform: translatez(-100px);
+}
+.left {
+  transform: translatez(100px);
+}
+
+.right {
+  transform: rotateY(90deg) translatez(100px);
+}
+.front {
+  transform: translatex(-100px) rotateY(90deg);
+}
+.bottom {
+  transform: translatey(100px) rotatex(90deg);
+}
+.top {
+  transform: translatey(-100px) rotatex(90deg);
+}

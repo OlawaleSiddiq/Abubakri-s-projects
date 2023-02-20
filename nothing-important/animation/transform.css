@@ -1,0 +1,26 @@
+* {
+    .....
+}
+
+.title {
+    ...
+}
+
+div {
+    background-color: blueviolet;
+    width: 100px;
+    height: 100px;
+    /* margin-top: 200px; */
+    border: 2px solid black;
+    animation: plane 5s linear forwards infinite
+}
+
+@keyframes plane {
+    0% {
+        transform: translate(-100px);
+    }
+
+    100% {
+        transform: translate(1700px);
+    }
+}

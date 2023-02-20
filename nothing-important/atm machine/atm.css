@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: rgb(46, 45, 45);
+}
+.container {
+  min-width: 500px;
+  width: 70vw;
+  border-radius: 20px;
+  height: 95vh;
+  margin: -220px auto;
+  position: relative;
+  border: 30px solid rgb(25, 87, 87);
+  background-color: rgb(13, 73, 73);
+}
+.cont2 {
+  width: 60vw;
+  height: 65vh;
+  margin: 10px auto;
+  position: relative;
+  background-color: rgba(83, 119, 119, 0.219);
+}
+.cont3 {
+  display: flex;
+  /* flex-direction: row; */
+  width: 37vw;
+  border-radius: 20px;
+  border: 5px solid rgb(27, 27, 27);
+  height: 50vh;
+  margin: 30px 50px;
+  position: absolute;
+  background-color: rgb(65, 66, 66);
+}
+.cont4 {
+  width: 27vw;
+  border-radius: 20px;
+  height: 43vh;
+  margin: 18px 65px;
+  position:relative;
+  background-color: rgb(196, 226, 247);
+}
+.atm {
+  width: 80px;
+  top: 20vh;
+  right: 80px;
+  background-color: rgb(54, 56, 56);
+  border: 5px solid rgb(27, 26, 26);
+  height: 50px;
+  position: absolute;
+  border-radius: 40px;
+}
+.hr1 {
+  width: 75%;
+  margin: 18px auto;
+}
+.dispencer {
+  width: 200px;
+  top: 43vh;
+  right: 25px;
+  background-color: rgb(54, 56, 56);
+  border: 5px solid rgb(22, 21, 21);
+  /* float: right; */
+  height: 70px;
+  border-radius: 10px;
+  position: absolute;
+}
+.hr2 {
+  width: 75%;
+  height: 20px;
+  margin: 18px auto;
+  background-color: rgb(51, 49, 49);
+}
+.pad {
+  padding: 5px;
+  box-sizing: unset;
+  width: 150px;
+  margin-top: 65vh;
+  margin-left: 20vw;
+  transform: rotatex(50deg);
+  background-color: rgb(54, 56, 56);
+  border-bottom: 20px solid rgb(32, 31, 31);
+  height: 70px;
+  border-radius: 5px;
+  position: fixed;
+}
+.amntbtn {
+  position: absolute;
+  margin: 60px 10px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+button {
+  background-color: grey;
+  border-radius: 10px;
+}
+.amntbtn2 {
+  position: absolute;
+  top: 60px;
+  right:10px;
+  width: 40px;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  /* float: right; */
+}
+.container .pad button {
+  transform: rotatex(50deg);
+  margin-left: 1px;
+}
+input,
+p {
+  box-shadow: 0.1px 0.1px 5px rgb(240, 238, 238);
+  color: rgb(97, 93, 93);
+  width: 70%;
+  height: 50px;
+  font-size: 15px;
+  border: none;
+  background-color: inherit;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+}
+p {
+  padding: 15px 0 0 5px;
+}
+img {
+  opacity: 10%;
+  animation: money 7s linear infinite alternate;
+}
+@keyframes money {
+  100% {
+    transform: translatey(400px);
+  }
+}

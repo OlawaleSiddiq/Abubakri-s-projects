@@ -1,0 +1,17 @@
+body {
+  background:repeating-linear-gradient(45deg,rgb(252, 249, 249) 5%, rgb(26, 179, 250) 10%, rgb(241, 93, 7) 15%);
+  background-size: cover;
+  overflow: hidden;
+  height:100vh;
+  width:100vw;
+  /* background-color: black; */
+}
+.text {
+  background-image: url(../../fire-51.gif);
+  background-clip: text;
+  color: transparent;
+  font-size: 80px;
+  font-weight: bold;
+  font-family: serif;
+  text-align: center;
+}

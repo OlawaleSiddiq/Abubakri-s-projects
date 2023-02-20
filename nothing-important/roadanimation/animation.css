@@ -1,0 +1,306 @@
+body {
+  background-image: url(./street.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+}
+
+.bigger {
+  height: 120px;
+  margin-top: -40px;
+}
+
+.flex {
+  /* border: 2px solid red; */
+  display: flex;
+  height: 70px;
+  gap: 50px;
+  /* margin-top: 10px; */
+}
+
+.flex2 {
+  /* border: 2px solid red; */
+  display: flex;
+  height: 70px;
+  gap: 50px;
+  margin-top: 32px;
+}
+
+.plane {
+  /* border: 2px solid black; */
+  display: flex;
+  height: 50px;
+  animation: plane 7s linear infinite;
+  animation-direction: reverse;
+}
+
+@keyframes plane {
+  0% {
+    transform: translatex(-100px);
+  }
+
+  100% {
+    transform: translatex(1800px);
+  }
+}
+
+.heli {
+  margin-bottom: 10px;
+  /* border: 2px solid black; */
+  display: flex;
+  height: 70px;
+  animation: heli 11s linear infinite;
+  animation-direction: reverse;
+}
+
+@keyframes heli {
+  0% {
+    transform: translatex(-100px);
+  }
+
+  100% {
+    transform: translatex(800px);
+  }
+}
+.humansmall {
+  /* border: 2px solid red; */
+  position: relative;
+  z-index: 50;
+  height: 40px;
+  display: flex;
+  margin: 25px 100px 0 100px;
+  height: 50px;
+  animation: humansmall 20s linear infinite;
+  animation-direction: reverse;
+}
+
+@keyframes humansmall {
+  0% {
+    transform: translatex(-1800px);
+  }
+
+  100% {
+    transform: translatex(200px);
+  }
+}
+.orangeguy {
+  height: 40px;
+  display: flex;
+  margin-top: 15px;
+  height: 50px;
+  z-index: -200;
+  animation: orangeguy 23s linear infinite;
+}
+
+@keyframes orangeguy {
+  0% {
+    transform: translatex(-1300px);
+  }
+
+  100% {
+    transform: translatex(100px);
+  }
+}
+.humansmallf {
+  height: 40px;
+  display: flex;
+  margin: 9px 100px 0px 100px;
+  height: 50px;
+  z-index: -999;
+  animation: humansmallf 15s linear infinite;
+}
+
+@keyframes humansmallf {
+  0% {
+    transform: translatex(400);
+  }
+
+  100% {
+    transform: translatex(1000px);
+  }
+}
+.redcar {
+  position: relative;
+  display: flex;
+  z-index: -1;
+  margin-bottom: 40px;
+  height: 60px;
+  animation: redcar 4s linear infinite;
+  /* animation-direction: reverse; */
+}
+
+@keyframes redcar {
+  0% {
+    transform: translatex(-300px);
+  }
+
+  100% {
+    transform: translatex(1100px);
+  }
+}
+
+.wcaright {
+  display: flex;
+  /* border: 2px red; */
+  z-index: 2;
+  margin-top: 60px;
+  height: 60px;
+  animation: wcaright 9s linear infinite;
+  /* animation-direction: reverse; */
+}
+
+@keyframes wcaright {
+  0% {
+    transform: translatex(-900px);
+  }
+
+  100% {
+    transform: translatex(600px);
+  }
+}
+
+.greencar {
+  height: 70px;
+  /* border: 2px solid red; */
+  display: flex;
+  z-index: 70;
+  margin-top: 70px;
+  animation: greencar 3.5s linear infinite;
+}
+
+@keyframes greencar {
+  0% {
+    transform: translatex(-100px);
+  }
+
+  100% {
+    transform: translatex(1300px);
+  }
+}
+
+.lamp {
+  position: relative;
+  height: 90px;
+  justify-content: space-around;
+  display: flex;
+  z-index: 999;
+  margin-bottom: 20px;
+}
+
+.trailer1 {
+  display: flex;
+  height: 100px;
+  animation: trailer1 7s linear infinite;
+  /* animation-direction: reverse; */
+}
+
+@keyframes trailer1 {
+  0% {
+    transform: translatex(-900px);
+  }
+
+  100% {
+    transform: translatex(900px);
+  }
+}
+/* ....................................................... */
+.stagnant {
+  margin-bottom: 60px;
+  height: 80px;
+  position: relative;
+  /* z-index: -1; */
+}
+.bike {
+  position: relative;
+  display: flex;
+  z-index: -1;
+  margin-bottom: 70px;
+  height: 60px;
+  animation: bike 6s linear infinite;
+  animation-direction: reverse;
+}
+.police {
+  margin-top: 10px;
+  position: relative;
+  z-index: 20;
+  height: 90px;
+}
+
+@keyframes bike {
+  0% {
+    transform: translatex(-1500px);
+  }
+
+  100% {
+    transform: translatex(100px);
+  }
+}
+
+.sportcar {
+  display: flex;
+  position: relative;
+  /* border: 2px red; */
+  z-index: 20;
+  margin-top: 60px;
+  height: 60px;
+  animation: sportcar 4s linear infinite;
+  animation-direction: reverse;
+}
+
+@keyframes sportcar {
+  0% {
+    transform: translatex(-100px);
+  }
+
+  100% {
+    transform: translatex(1300px);
+  }
+}
+
+.bus {
+  height: 100px;
+  /* border: 2px solid red; */
+  display: flex;
+  z-index: 40;
+  margin-top: 50px;
+  animation: bus 3.5s linear infinite;
+  animation-direction: reverse;
+}
+
+@keyframes bus {
+  0% {
+    transform: translatex(-400px);
+  }
+
+  100% {
+    transform: translatex(1200px);
+  }
+}
+
+.trailer2 {
+  margin-left: 150px;
+  z-index: 10;
+  display: flex;
+  height: 100px;
+  animation: trailer2 7s linear infinite;
+  animation-direction: reverse;
+}
+
+@keyframes trailer2 {
+  0% {
+    transform: translatex(-1000px);
+  }
+
+  100% {
+    transform: translatex(500px);
+  }
+}
+.grass {
+  display: flex;
+  margin-top: 35px;
+  height: 70px;
+  position: absolute;
+  z-index: 140px;
+}

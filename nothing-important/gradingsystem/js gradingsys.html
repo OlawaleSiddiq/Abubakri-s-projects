@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <fieldset style="background:aqua;width:70%; margin:5px auto; border:5px dotted black ">
+
+   <legend style="margin:0 auto; border:5px dotted black; background-color: rgb(173, 212, 212); ">
+
+     <h1 style="text-align: center; font-size: 50px;color:rgb(22, 21, 21);text-shadow: 2px 2px 5px; ">GRADING SYSTEM</h1>
+    </legend>
+     <input placeholder="Please input your age" style="width: 40vw; font-size: 30px; display:block; margin: 30px auto; padding: 10px" id="scoreInput"
+    type="text"/>
+  <button style="
+        background-color: rgb(201, 211, 211);
+        color: black;
+        font-size: 30px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px double black;
+        display:block; margin: 30px auto;
+        box-shadow: 2px 2px 5px;
+      " onclick="grade()">
+    GRADE
+  </button>
+  <p id="result" style="font-size: 50px; background-color: rgb(209, 201, 201); text-align: center"></p>
+  </fieldset>
+  <script>
+    // var name = "dorcas";
+    // var age = 20;
+
+    function grade() {
+      var mark = scoreInput.value; if (mark <= 10) {
+        result.innerText = "An Infant, how comes you are on the internet?"; result.style.color = "yellow"
+      }
+      else if (mark <= 19) {
+        result.innerText = "you are a teenage";
+        result.style.color = "orange";
+      }
+
+      else if (mark <= 29) {
+        result.innerText = "adult in your twenties";
+        result.style.color = "green"
+      }
+      else if (mark <= 39) {
+        result.innerText = " you are an adult in his thirties";
+        result.style.color = "green"
+      }
+      else if (mark <= 49) {
+        result.innerText = "you are an adult in his fourties";
+        result.style.color = "green"
+      }
+      else if (mark <= 59) {
+        result.innerText = "you are a ripe adult in his fifties";
+        result.style.color = "green"
+      }
+      else if (mark <= 69) {
+        result.innerText = "you are a fully riped adult in his sixties";
+        result.style.color = "orange"
+      }
+      else if (mark <= 79) {
+        result.innerText = "you are a roting banana 'adult in his seventies'";
+        result.style.color = "red"
+      } else if (mark <= 89) {
+        result.innerText = "you are 0n the edge of the cliff, be ready";
+        result.style.color = "red"
+      } else if (mark <= 99) {
+        result.innerText = "wow!!! you`ve out-lived 99% of your mates";
+        result.style.color = "black"
+      } else if (mark <= 109) {
+        result.innerText = "you are an extremly old person, please forget about the world";
+        result.style.color = "black"
+      }
+      else {
+        result.innerText = "You should`nt be alive!!! rest in peace";
+        result.style.color = "black"
+      }
+    }
+    
+    // if (age == 10) {
+    //   alert("you are now an adult")
+    // }
+    // else if (age < 18) {
+    //   alert("you are still a child")
+    // }
+    // else if (age > 18) {
+    //   alert("you are welcome")
+    // }
+    // else { alert("sope tie"); }
+  </script>
+</body>
+
+</html>

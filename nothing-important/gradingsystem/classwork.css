@@ -1,0 +1,46 @@
+@keyframes blink {
+    70% {
+        background: yellow
+    }
+
+    75% { 
+        background: rgb(0, 217, 255)
+    }
+
+    80% {
+        background: rgb(245, 68, 14)
+    }
+
+    85% {
+        background: rgb(126, 17, 189)
+    }
+
+    90% {
+        background: rgb(21, 233, 32)
+    }
+
+    94% {
+        background: yellow
+    }
+
+    97% {
+        background: rgb(8, 38, 173)
+    }
+
+    100% {
+        background: rgb(248, 45, 9)
+    }
+}
+body{background-color: black;}
+
+div {
+    background-image: url(./fire-51.gif);
+    background-clip: text;
+    text-align: center;
+    font-size: 2em;
+    color: transparent;
+    height: fit-content;
+    border: 5px solid black;
+    animation: blink 5s infinite;
+    -webkit-animation: blink 5s infinite;
+}

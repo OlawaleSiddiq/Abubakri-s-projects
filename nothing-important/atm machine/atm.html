@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <me ta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="atm.css" />
+</head>
+
+<body>
+    <img src="./money.jpg" alt="">
+    <div class="container">
+        <div class="pad">
+            <button>1</button> <button>2</button> <button>3</button>
+            <button>4</button> <button>5</button> <button>6</button> <br /><button>
+                7
+            </button>
+            <button>8</button> <button>9</button> <button>0</button>
+            <button>00</button> <button>*</button> <br /><button onclick="enter()">
+                enter
+            </button>
+            <button onclick="cancel()">Cancel</button>
+            <button onclick="cash()">Cash</button>
+        </div>
+        <div class="cont2">
+            <div class="atm">
+                <hr class="hr1" />
+            </div>
+            <div class="dispencer">
+                <hr class="hr2" />
+            </div>
+            <div class="cont3">
+                <div class="amntbtn2">
+                    <button onclick="tenk()">10000</button>
+                    <button onclick="twentyk()">20000</button>
+                    <button onclick="other()">Other</button>
+                </div>
+                <div class="amntbtn">
+                    <button onclick="onek()">1000</button>
+                    <button onclick="twok()">2000</button>
+                    <button onclick="fivek()">5000</button>
+                </div>
+                <div class="cont4">
+
+                    <input type="text" id="pw" placeholder="Please input your password here:" />
+                    <p id="result">Your account balance is #1000000.00</p>
+                    <input type="text" id="input">
+                    <marquee behavior="" direction="">....................Thank You For Banking With Us..............
+                    </marquee>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        function enter() {
+            let pass = pw.value;
+            if (pass == 2222) {
+                result.innerText = "Enter an amount to withdraw. ";
+                result.style.color = "Green";
+            }
+            else if (pass <= "") {
+                result.innerText = " Enter your 4 digit password. ";
+                // result.style.color = "";
+            }
+            else {
+                result.innerText = 'incorrect password.';
+                result.style.color = 'red'
+            }
+        }
+        function onek() {
+            let m = 1000000;
+            let one = 1000;
+            let total = m - one;
+            let next = total;
+            result.innerText = 'Your remaining account balance is' + " " + '#' + total + '.00';
+            result.style.color = black;
+        }
+        function twok() {
+            // let m = 1000000;
+            let two = 2000;
+            total - two;
+            result.innerText = 'Your remaining account balance is' + " " + '#' + total + '.00';
+            result.style.color = black;
+        }
+        function fivek() {
+            let m = 1000000;
+            let five = 5000;
+            let total = m - five;
+            result.innerText = 'Your remaining account balance is' + " " + '#' + total + '.00';
+            result.style.color = black;
+        }
+        function tenk() {
+            let m = 1000000;
+            let ten = 10000;
+            let total = m - ten;
+            result.innerText = 'Your remaining account balance is' + " " + '#' + total + '.00';
+            result.style.color = black;
+        }
+        function twentyk() {
+            let m = 1000000;
+            let twenty = 20000;
+            let total = m - twenty;
+            result.innerText = 'Your remaining account balance is' + " " + '#' + total + '.00';
+            result.style.color = black;
+        }
+        function cash() {
+            result.innerText = "Sorry, maximum of #20,000 at a time";
+            result.style.color = black;
+        }
+        function other() {
+            result.innerText = "Input amount to withdraw below";
+            result.style.color = black;
+        }
+        function cancel() {
+            // let m = input.value;
+            // let clear = input.value;
+            // let total = m - clear;
+            // retun = total;
+            result.innerText = "Enter amount below";
+            result.style.color = black;
+        }
+
+    </script>
+</body>
+
+</html>

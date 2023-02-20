@@ -1,0 +1,53 @@
+body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-image: url(./night-sky-background-with-shining-stars.jpg)
+}
+
+.mercury img {
+    width: 60px;
+    height: 60px
+}
+
+
+.venus img {
+    width: 140px;
+    height: 140px
+}
+
+.earth img {
+    width: 110px;
+    height: 110px
+}
+
+.mars img {
+    width: 80px;
+    height: 80pxs
+}
+
+.jupiter img {
+    width: 250px;
+    height: 250px
+}
+
+.saturn img {
+    width: 250px;
+    height: 250px
+}
+
+.uranus img {
+    width: 140px;
+    height: 140px
+}
+
+.neptune img {
+    width: 120px;
+    height: 120px
+}
+
+.pluto img {
+    width: 100px;
+    height: 100px
+}
