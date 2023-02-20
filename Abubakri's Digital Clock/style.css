@@ -114,3 +114,9 @@ body {
 .number11 {
   --rotate: 330deg;
 }
+.date {
+  transform: translatey(50px);
+font-size: large;
+background-color: goldenrod;
+
+}

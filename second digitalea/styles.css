@@ -1,0 +1,118 @@
+*::after,
+*::before,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(61, 199, 158);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.clock-container {
+  min-width: 400px;
+  position: relative;
+  min-height: 400px;
+  background: linear-gradient(
+    90deg,
+    rgba(156, 224, 156, 0.9),
+    rgba(112, 151, 224, 0.795)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid rgb(7, 7, 7);
+  border-radius: 50%;
+  box-shadow: 0 0 30px 10px rgb(7, 7, 7);
+  text-align: center;
+}
+.date {
+  color: white;
+  transform: translatey(30px);
+  /* z-index: 20; */
+  text-shadow: 0px 0px 5px rgb(204, 16, 16);
+}
+
+.hand {
+  --rotation: 0;
+  position: absolute;
+  background-color: black;
+  bottom: 50%;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  transform: rotate(calc(var(--rotation) * 1deg));
+  transform-origin: bottom;
+}
+.hour-hand {
+  width: 9px;
+  height: 30%;
+  background-color: black;
+}
+.minute-hand {
+  /* border: 1px solid rgb(136, 212, 136, 0.9); */
+  width: 6px;
+  height: 40%;
+  background-color: black;
+}
+.second-hand {
+  width: 3px;
+  height: 48%;
+  background-color: rgb(112, 3, 3);
+}
+.hand-circle {
+  background-color: rgb(94, 5, 5);
+  width: 20px;
+  height: 20px;
+  z-index: 10;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateY(50%);
+}
+
+.numbers {
+  font-size: 30px;
+  font-weight: 700;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transform: rotate(var(--rotation));
+}
+.number1 {
+  --rotation: 30deg;
+}
+.number2 {
+  --rotation: 60deg;
+}
+.number3 {
+  --rotation: 90deg;
+}
+.number4 {
+  --rotation: 120deg;
+}
+.number5 {
+  --rotation: 150deg;
+}
+.number6 {
+  --rotation: 180deg;
+}
+.number7 {
+  --rotation: 210deg;
+}
+.number8 {
+  --rotation: 240deg;
+}
+.number9 {
+  --rotation: 270deg;
+}
+.number10 {
+  --rotation: 300deg;
+}
+.number11 {
+  --rotation: 330deg;
+}
