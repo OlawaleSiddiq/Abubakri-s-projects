@@ -6,6 +6,7 @@
   box-sizing: border-box;
 }
 body {
+  position: fixed;
   width: 100vw;
   height: 100vh;
   background-color: rgb(240, 159, 38);
@@ -32,7 +33,12 @@ body {
   background-color: goldenrod;
   background-blend-mode: soft-light;
 }
-
+@media (max-width: 600px) {
+  .clockContainer, .number {
+    width: 90vw;
+    height: 90vw;
+  }
+}
 .round {
   z-index: 15;
   width: 15px;
