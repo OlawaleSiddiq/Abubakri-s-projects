@@ -26,7 +26,7 @@ body {
   align-items: center;
   min-width: 400px;
   min-height: 400px;
-  background: url(../bankingApp/index.jpg);
+  background: url(./index.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: goldenrod;
