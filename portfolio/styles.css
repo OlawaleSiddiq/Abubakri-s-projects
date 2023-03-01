@@ -1,0 +1,144 @@
+:root {
+  --fit-content: fit-content;
+  --text-color: rgb(11, 84, 153);
+}
+* {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: clamp(1rem, 1rem + 1vw, 3rem);
+  width: 100vw;
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: clamp(1rem, 2rem + 3vw, 4rem);
+}
+.info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.container {
+  margin-top: 50px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgb(180, 153, 85),
+    rgb(83, 216, 216),
+    rgb(218, 184, 99)
+  );
+}
+
+nav {
+  position: fixed;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  width: 100vw;
+  height: 100px;
+  background: linear-gradient(90deg, var(--text-color), goldenrod);
+}
+
+nav:hover {
+  box-shadow: none;
+  transition: 2s;
+  background-color: rgba(26, 26, 97, 0.938);
+}
+.image {
+  position: fixed;
+  border-radius: 50px;
+  box-shadow: 0 0 10px 2px orangered;
+  top: 15px;
+  left: 40px;
+  height: 70px;
+  width: 70px;
+}
+nav > .info > a {
+  border: 1px solid white;
+  padding: 5px;
+  text-decoration: none;
+  color: var(--text-color);
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+nav > .info > a:hover {
+  color: white;
+}
+
+h1 span {
+  text-shadow: 1px 1px 5px rgb(19, 6, 1);
+  color: rgb(23, 158, 248);
+}
+.projects h2 {
+  color: goldenrod;
+  text-shadow: 0 0 10px rgb(8, 8, 73);
+}
+.projects {
+  margin: 10vw ;
+  text-align: center;
+}
+.projects span {
+  color: orangered;
+}
+
+.projectsLink {
+  margin: 50px 0;
+  color:white;
+  font-size: initial;
+  padding: 3vw;
+  border-radius: 10px;
+  gap: 20px;
+  background-color: var(--text-color);
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.projectsLink div a {
+  display: flex;
+  overflow: hidden;
+  border-radius: 30px;
+  border: 2px solid black;
+  justify-content: center;
+  align-items: center;
+}
+
+#about img{
+  width: 15vw;
+  margin: 10px 
+}
+
+footer {
+  display: grid;
+  gap:10px;
+  grid-template-columns: repeat(2, auto);
+  background-color: var(--text-color);
+  color: white;
+  width: 100vw;
+  font-size: initial;
+  padding: 20px;
+}
+@media (max-width: 600px) {
+  .image {
+    left: 10px;
+  }
+  nav {
+    gap: 20px;
+    background: linear-gradient(90deg, var(--text-color), goldenrod);
+  }
+  .info a {
+    font-size: initial;
+    padding: 1px;
+  }
+  .info {
+    padding-right: 20px;
+  }
+  .projectsLink {
+    grid-template-columns: repeat(2, auto);
+  }
+}

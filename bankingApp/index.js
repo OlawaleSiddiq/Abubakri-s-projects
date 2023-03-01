@@ -57,20 +57,20 @@ function register() {
     }
 
     if (fullName.value === "") {
-        alert("please input your name")
+        alert("please input your fullname")
         return
     }
-    if (email.value === "") {
+    if (email.value === "" || email.value.includes('@') === false) {
         alert("please input a valid email address")
         return
     }
 
-    if (age.value === "") {
-        alert(" Please enter your age. 18 years or above")
+    if (age.value < 18) {
+        alert("You must be 18 years and above")
         return
     }
 
-    if (phone.value === "") {
+    if (phone.value.length < 11 || phone.value === "") {
         alert("please input your phone number")
         return
     }
@@ -94,7 +94,7 @@ function deposit() {
     };
     total = currentUser.uBalance + Number(transInput.value)
     currentUser.uBalance = total
-    alert('you successfully deposited #' + transInput.value +  ".00"+' into your account')
+    alert('you successfully deposited #' + transInput.value + ".00" + ' into your account')
     document.getElementById("balanceDisplay").innerText = total + ".00"
     transInput.value = ""
     transInput.focus()
@@ -108,7 +108,7 @@ function withdraw() {
     };
     total = currentUser.uBalance - Number(transInput.value)
     currentUser.uBalance = total
-    alert('you successfully withraw #' + transInput.value +  ".00"+' from your account')
+    alert('you successfully withraw #' + transInput.value + ".00" + ' from your account')
     document.getElementById("balanceDisplay").innerText = total + ".00"
     transInput.value = ""
     transInput.focus()
@@ -153,7 +153,7 @@ function transfer() {
         }
         total = currentUser.uBalance - Number(gift.value)
         currentUser.uBalance = total
-        alert('You successfully Transfered #' + gift.value + ".00"+' to your beneficiary')
+        alert('You successfully Transfered #' + gift.value + ".00" + ' to your beneficiary')
         document.getElementById("balanceDisplay").innerText = total + ".00"
         transInput.focus()
         this.parentElement.remove()

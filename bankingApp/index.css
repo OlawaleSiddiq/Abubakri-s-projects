@@ -132,7 +132,7 @@ input:hover {
 
 .transpage {
   word-wrap: break-word;
-  width: inherit;
+  width: 45%;
   height: 85%;
   background-color: rgb(25, 25, 59);
   border-radius: 20%;
