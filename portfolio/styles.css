@@ -10,6 +10,7 @@
 }
 
 body {
+  font-family:'Times New Roman', Times, serif;
   font-size: clamp(1rem, 1rem + 1vw, 3rem);
   width: 100vw;
   color: var(--text-color);
@@ -19,6 +20,7 @@ h1 {
   margin-top: 20px;
   font-size: clamp(1rem, 2rem + 3vw, 4rem);
 }
+
 .info {
   display: flex;
   justify-content: space-around;
@@ -41,7 +43,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, auto);
   width: 100vw;
-  height: 100px;
+  height: 17vh;
   background: linear-gradient(90deg, var(--text-color), goldenrod);
 }
 
@@ -81,7 +83,7 @@ h1 span {
   text-shadow: 0 0 10px rgb(8, 8, 73);
 }
 .projects {
-  margin: 10vw ;
+  margin: 10vw;
   text-align: center;
 }
 .projects span {
@@ -89,8 +91,9 @@ h1 span {
 }
 
 .projectsLink {
-  margin: 50px 0;
-  color:white;
+  margin: 50px 20px;
+  /* margin: 50px 0; */
+  color: white;
   font-size: initial;
   padding: 3vw;
   border-radius: 10px;
@@ -116,7 +119,7 @@ h1 span {
 
 footer {
   display: grid;
-  gap:10px;
+  gap: 10px;
   grid-template-columns: repeat(2, auto);
   background-color: var(--text-color);
   color: white;
@@ -124,12 +127,14 @@ footer {
   font-size: initial;
   padding: 20px;
 }
-@media (max-width: 600px) {
+
+@media (max-width: 500px) {
   .image {
     left: 10px;
   }
   nav {
-    gap: 10px;
+    height: 12vh;
+    gap: 30px;
     background: linear-gradient(90deg, var(--text-color), goldenrod);
   }
   nav .info a {
@@ -138,5 +143,12 @@ footer {
   }
   .projectsLink {
     grid-template-columns: repeat(2, auto);
+  }
+  .image {
+    height: 50px;
+    width: 50px;
+  }
+  .info {
+    padding-right: 20px;
   }
 }
