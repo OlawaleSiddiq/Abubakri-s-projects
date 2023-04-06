@@ -1,0 +1,66 @@
+*::after,
+*::before,
+* {
+  box-sizing: border-box;
+  word-break: break-all;
+  overflow: hidden;
+}
+body {
+  background: linear-gradient(45deg, rgb(95, 248, 197) 30%, rgb(88, 127, 235));
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+.board {
+  padding: 10px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.screen {
+  background-color: rgb(255, 255, 255, 0.5);
+  width: 280px;
+  align-items: start;
+  height: 75px;
+}
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(4, 70px);
+  grid-template-rows: repeat(5, 70px);
+  justify-content: center;
+  align-content: center;
+}
+.keys,
+.del,
+.ac,
+.equal {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    45deg,
+    rgb(88, 127, 235, 0.4) 20%,
+    rgb(95, 248, 197, 0.4)
+  );
+}
+
+.spantwo {
+  grid-column: span 2;
+}
+.topScreen {
+  height: 36px;
+  padding: 3px;
+  text-align: end;
+  font-size: 30px;
+  width: inherit;
+}
+.lowerScreen {
+  height: 30px;
+  padding: 3px;
+  text-align: end;
+  font-size: 25px;
+  width: inherit;
+}

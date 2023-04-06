@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="quote"></div>
+    <div id="root"></div>
+    <script>
+        // output = document.querySelector('.quote')
+        //     fetch("https://type.fit/api/quotes")
+        //         .then((response) => response.json())
+        //         .then(data => output.innerText = data[Math.floor(Math.random() * 1000)].text);
+
+        const app = document.getElementById('root')
+        var request = new XMLHttpRequest()
+        request.open('GET', "https://type.fit/api/quotes", true)
+        request.onload = function () {
+            var data = JSON.parse(this.response)
+            data.forEach(quote => {
+                let p = document.createElement('p')
+                p.innerText = quote.text;
+                app.appendChild(p)
+            })
+        }
+        request.send()
+    </script>
+</body>
+
+</html>

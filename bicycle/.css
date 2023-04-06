@@ -1,0 +1,252 @@
+body {
+  overflow: hidden;
+}
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  gap: 92px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1000;
+  /* animation: bicycle 10s linear infinite; */
+}
+
+.wheel1,
+.wheel2 {
+  z-index: -1;
+  box-sizing: border-box;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  border: 20px solid black;
+  position: relative;
+  animation: coaster 8s linear infinite forwards;
+}
+
+.wheel1::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: rgb(12, 12, 12);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.framework {
+  position: relative;
+  left: 11%;
+}
+
+.frame {
+  width: 160px;
+  height: 10px;
+  background-color: rgb(243, 9, 9);
+  position: absolute;
+  top: 50%;
+  transform-origin: bottom;
+}
+.seat {
+  width: 10px;
+  height: 10px;
+  z-index: 5;
+  border: 20px solid rgb(0, 0, 0);
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  position: absolute;
+  top: 26%;
+  left: 24.5%;
+}
+.frame1 {
+  transform: translate(140px, -60px) rotatez(135deg);
+  width: 145px;
+}
+.frame2 {
+  transform: translate(55px, -70px) rotatez(70deg);
+  width: 160px;
+}
+.frame3 {
+  transform: translate(20px, -5px);
+  border-radius: 20px;
+  width: 140px;
+}
+.frame4 {
+  transform: translate(123px, -105px);
+  width: 150px;
+}
+.frame5 {
+  transform: translate(5px, -52px) rotatez(-45deg);
+  width: 150px;
+  border-radius: 20px;
+  z-index: 40;
+}
+
+.frame6 {
+  transform: translate(198px, -78px) rotatez(65deg);
+  width: 165px;
+  border-radius: 20px;
+  height: 14px;
+}
+.handle {
+  width: 70px;
+  height: 10px;
+  background-color: black;
+  position: absolute;
+  border-radius: 10px;
+  top: 26%;
+  left: 34.3%;
+}
+
+.pedal {
+  width: 7px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+  left: 30.5%;
+  border-radius: 20px;
+}
+
+.pf2 {
+  background-color: black;
+  z-index: -2;
+  width: 25px;
+  height: 10px;
+  position: absolute;
+  left: 29.95%;
+  top: 255px;
+  border-radius: 3px;
+}
+
+.pf1 {
+  background-color: black;
+  z-index: 60;
+  width: 25px;
+  height: 10px;
+  position: absolute;
+  left: 29.95%;
+  top: 350px;
+  border-radius: 3px;
+}
+
+.pedal1 {
+  transform: translatey(50%);
+  z-index: 50;
+}
+.pedal2 {
+  transform: translatey(-50%);
+  z-index: -1;
+}
+
+.engine {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: black;
+  z-index: 40;
+  position: absolute;
+  left: 28.5%;
+}
+
+.engine::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  width: 55px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgb(51, 50, 50);
+}
+
+.chaindown {
+  width: 125px;
+  height: 5px;
+  background-color: black;
+  position: absolute;
+  left: 280px;
+  z-index: 40;
+  transform: rotate(6deg) translatey(13px);
+  transform-origin: left;
+}
+
+.chainup {
+  width: 130px;
+  height: 5px;
+  background-color: black;
+  position: absolute;
+  left: 280px;
+  z-index: 40;
+  transform: rotate(-6deg) translatey(-13px);
+  transform-origin: left;
+}
+@keyframes bicycle {
+  50% {
+    transform: translatex(200px);
+  }
+  100% {
+    transform: translatex(0);
+  }
+}
+
+@keyframes coaster {
+  100% {
+    transform: rotatez(360deg);
+  }
+}
+
+@keyframes floor {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(-1100px);
+  }
+}
+
+.rode {
+  --rotation: 0;
+  width: 3px;
+  height: 50%;
+  position: absolute;
+  background-color: rgb(240, 236, 236);
+  left: 50%;
+  bottom: 50%;
+  transform-origin: bottom;
+  margin-left: -3px;
+}
+.rode1 {
+  transform: rotate(45deg);
+}
+.rode2 {
+  transform: rotate(90deg);
+}
+.rode3 {
+  transform: rotate(135deg);
+}
+.rode4 {
+  transform: rotate(180deg);
+}
+.rode5 {
+  transform: rotate(225deg);
+}
+.rode6 {
+  transform: rotate(270deg);
+}
+.rode7 {
+  transform: rotate(315deg);
+}
+.rode8 {
+  transform: rotate(360deg);
+}
+.floordiv {
+  background-image: url(./road.jpg);
+  width: 200vw;
+  filter: opacity(0.9);
+  min-height: 200px;
+  animation: floor 15s linear infinite;
+  margin-top: -325px;
+}

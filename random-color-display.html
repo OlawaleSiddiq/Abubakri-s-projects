@@ -41,8 +41,8 @@
             align-content: center;
             flex-direction: column;
             border-radius: 50px;
-            background-color:orangered;
-            box-shadow: 0 0 30px 30px rgb(123, 33, 240);
+            background-color:rgb(237, 215, 207);
+            box-shadow: 0 0 30px 30px rgb(135, 26, 9);
         }
     </style>
 </head>
@@ -51,8 +51,8 @@
     <div class="container">
         <div>hello</div>
         <div>world</div>
-        <div></div>
-        <div></div>
+        <div>Muba</div>
+        <div>Majd</div>
         <div></div>
         <div></div>
         <div></div>
@@ -66,25 +66,25 @@
         divs.forEach(cell => { cell.addEventListener('click', col, { once: true }) })
 
         function changeBoxColor() {
-            document.querySelector('div:nth-child(1):not(.container)').style.backgroundColor = randomNumber()
-            document.querySelector('div:nth-child(3)').style.backgroundColor = randomNumber()
-            document.querySelector('div:nth-child(5)').style.backgroundColor = randomNumber()
-            document.querySelector('div:nth-child(7)').style.backgroundColor = randomNumber()
-            document.querySelector('div:nth-child(9)').style.backgroundColor = randomNumber()
-            document.querySelector('div:nth-child(1):not(.container)').style.color = randomNumber()
-            document.querySelector('div:nth-child(3)').style.color = randomNumber()
-            document.querySelector('div:nth-child(5)').style.color = randomNumber()
-            document.querySelector('div:nth-child(7)').style.color = randomNumber()
-            document.querySelector('div:nth-child(9)').style.color = randomNumber()
+            document.querySelector('div:nth-child(1):not(.container)').style.backgroundColor =  `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
+            document.querySelector('div:nth-child(3)').style.backgroundColor =  `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
+            document.querySelector('div:nth-child(5)').style.backgroundColor =  `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
+            document.querySelector('div:nth-child(7)').style.backgroundColor =  `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
+            document.querySelector('div:nth-child(9)').style.backgroundColor =  `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
+            document.querySelector('div:nth-child(1):not(.container)').style.color =  `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
+            document.querySelector('div:nth-child(3)').style.color =  `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
+            document.querySelector('div:nth-child(5)').style.color =  `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
+            document.querySelector('div:nth-child(7)').style.color =  `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
+            document.querySelector('div:nth-child(9)').style.color =  `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
         }
         setInterval(changeBoxColor, 500)
 
         function changeBoxColor2() {
             let random = Math.floor(Math.random * 9)
-            document.querySelector('div:nth-child(2)').style.backgroundColor = randomNumber()
-            document.querySelector('div:nth-child(4)').style.backgroundColor = randomNumber()
-            document.querySelector('div:nth-child(6)').style.backgroundColor = randomNumber()
-            document.querySelector('div:nth-child(8)').style.backgroundColor = randomNumber()
+            document.querySelector('div:nth-child(2)').style.backgroundColor =  `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
+            document.querySelector('div:nth-child(4)').style.backgroundColor =  `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
+            document.querySelector('div:nth-child(6)').style.backgroundColor =  `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
+            document.querySelector('div:nth-child(8)').style.backgroundColor =  `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
         }
         setInterval(changeBoxColor2, 700)
 
@@ -92,10 +92,8 @@
             return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
         }
         function col(e) {
-            e.target.style.backgroundColor = randomNumber()
+            e.target.style.backgroundColor =  `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
         }
-
-
     </script>
 </body>
 

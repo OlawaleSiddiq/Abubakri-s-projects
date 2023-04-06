@@ -1,6 +1,6 @@
 :root {
   --fit-content: fit-content;
-  --text-color: rgb(11, 84, 153);
+  --text-color:  rgb(41, 24, 88);
 }
 * {
   box-sizing: border-box;
@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family:'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: clamp(1rem, 1rem + 1vw, 3rem);
   width: 100vw;
   color: var(--text-color);
@@ -19,6 +19,7 @@ body {
 h1 {
   margin-top: 20px;
   font-size: clamp(1rem, 2rem + 3vw, 4rem);
+
 }
 
 .info {
@@ -30,32 +31,22 @@ h1 {
 
 .container {
   margin-top: 50px;
-  background: repeating-linear-gradient(
-    90deg,
-    rgb(180, 153, 85),
-    rgb(83, 216, 216),
-    rgb(218, 184, 99)
-  );
+  background-color: rgb(240, 232, 232);
 }
 
 nav {
+  z-index: 10;
   position: fixed;
   display: grid;
   grid-template-columns: repeat(2, auto);
   width: 100vw;
   height: 17vh;
-  background: linear-gradient(90deg, var(--text-color), goldenrod);
+  background-color: rgb(41, 24, 88);
 }
 
-nav:hover {
-  box-shadow: none;
-  transition: 2s;
-  background-color: rgba(26, 26, 97, 0.938);
-}
 .image {
   position: fixed;
   border-radius: 50px;
-  box-shadow: 0 0 10px 2px orangered;
   top: 15px;
   left: 40px;
   height: 70px;
@@ -65,21 +56,14 @@ nav > .info > a {
   border: 1px solid white;
   padding: 5px;
   text-decoration: none;
-  color: var(--text-color);
+  color: rgb(240, 232, 232);
   border-radius: 20px;
   font-size: 20px;
   font-weight: bold;
 }
-nav > .info > a:hover {
-  color: white;
-}
 
-h1 span {
-  text-shadow: 1px 1px 5px rgb(19, 6, 1);
-  color: rgb(23, 158, 248);
-}
 .projects h2 {
-  color: goldenrod;
+  color: rgb(28, 16, 73);
   text-shadow: 0 0 10px rgb(8, 8, 73);
 }
 .projects {
@@ -92,13 +76,12 @@ h1 span {
 
 .projectsLink {
   margin: 50px 20px;
-  /* margin: 50px 0; */
   color: white;
   font-size: initial;
   padding: 3vw;
   border-radius: 10px;
   gap: 20px;
-  background-color: var(--text-color);
+  background-color: rgb(41, 24, 88);
   display: grid;
   grid-template-columns: repeat(3, auto);
 }
@@ -112,16 +95,18 @@ h1 span {
   align-items: center;
 }
 
-#about img{
-  width: 15vw;
-  margin: 10px 
+#about img {
+  width: clamp(50px, 150px + 1vw, 150px);
+  margin: 10px;
+  border-radius: 50%;
+  border: 2px solid  rgb(41, 24, 88)
 }
 
 footer {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(2, auto);
-  background-color: var(--text-color);
+  background-color:  rgb(41, 24, 88);
   color: white;
   width: 100vw;
   font-size: initial;
@@ -129,13 +114,10 @@ footer {
 }
 
 @media (max-width: 500px) {
-  .image {
-    left: 10px;
-  }
+
   nav {
     height: 12vh;
     gap: 30px;
-    background: linear-gradient(90deg, var(--text-color), goldenrod);
   }
   nav .info a {
     font-size: 15px;

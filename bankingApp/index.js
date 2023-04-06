@@ -82,6 +82,7 @@ function register() {
     users.unshift(newPerson)
     console.log(users)
     localStorage.setItem(`record`, JSON.stringify(users))
+    
     containerOne.style.display = "block"
     containerTwo.style.display = "none"
     containerThree.style.display = "none"
