@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO-PRO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section class="login-page">
+        <div class="image"></div>
+        <h1>AA SIMPLE TO-DO LIST APP.</h1>
+        <p class="logP"> PLEASE FILL THE INPUT FIELDS WITH <br> YOUR LOGIN DETAILS.</p>
+        <label for="email">Email:<input type="email" required class="email" id="logEmail" placeholder="Enter Email"
+                name="email"></label>
+        <label for="password">Password:<input type="password" required class="password" id="logPassword"
+                placeholder="Enter Password" name="password"></label>
+        <button id="loginButton">LOGIN</button>
+        <p>Don't have an account? <span class="registerSpan">click here to signup</span> <br>
+            Terms and conditions.</p>
+    </section>
+    <section class="signup-page">
+        <form action="" onsubmit="return false">
+            <h2>WELCOME. <BR />PLEASE FILL THE REQUIRED FIELDS <br> TO CREATE AN ACCOUNT.</h2>
+            <label for="fullname">Fullname:<input type="text" required class="fullname" id="fullname"
+                    placeholder="Enter Fullname"></label>
+            <p class="validation fullname"></p>
+
+            <label for="email">Email:<input type="email" required class="email" id="email"
+                    placeholder="Enter Email"></label>
+            <p class="validation email"></p>
+
+            <label for="password">Password:<input type="password" required class="password" id="password"
+                    placeholder="Enter Password"></label>
+            <p class="validation password"></p>
+
+            <label for="passwordConfirmation">Confirm:<input type="password" required class="password"
+                    id="passwordConfirmation" placeholder="Confirm password"></label>
+            <p class="validation confirm"></p>
+
+            <label class="gender" for="gender"> Gender:
+                <input type="radio" name="gender" value="male" id="gender" checked="checked">male
+                <input type="radio" name="gender" value="female" id="gender">female
+            </label>
+            <button id="register">REGISTER</button>
+            <p class="login">Already have an account? <span class="login-span">click here to login </span></p>
+        </form>
+    </section>
+    <section class="todocontainer">
+        <h2>ORGANISE YOUR TO-DOs</h2>
+        <p>Keep track of your day to day schedules.</p>
+        <div class="details">
+            <label for="todoItem">Enter to-do name<input name="todoItem" type="text" id="todoItem"
+                    placeholder="Enter to-do item"></label>
+            <label for="date">Enter to-do date<input name="date" type="date" id="date" placeholder="date"></label>
+            <label for="description">Enter to-do description<input name="description" type="text" id="description"
+                    placeholder="To-do Description"></label>
+            <label for="select">Choose to-do type <select id="category" placeholder="Choose type">
+                    <option value="holiday">holiday</option>
+                    <option value="sports">sport</option>
+                    <option value="news">News</option>
+                    <option value="education">Education</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="date">date</option>
+                    <option value="meeting">Meeting</option>
+                </select>
+            </label>
+        </div>
+        <button class="addButton" id="addtodo">ADD TO-DO</button>
+        <ul></ul>
+        <p class="logout">Logout.</p>
+    </section>
+    <!-- <audio src="./08-Qdot-Duro-(JustNaija.com).mp3.temp" id="audi"></audio> -->
+    <script src="script.js"></script>
+</body>
+
+</html>

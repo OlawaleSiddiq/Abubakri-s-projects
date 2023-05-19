@@ -18,6 +18,7 @@ window.onload = () => {
     }
 
 }
+
 function login() {
     let logemail = document.getElementById('emailInput').value.toUpperCase()
     let logpassword = document.getElementById('passwordInput').value.toUpperCase()
