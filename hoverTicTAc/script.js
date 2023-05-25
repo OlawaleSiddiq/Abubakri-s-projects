@@ -2,7 +2,6 @@ let restart = document.getElementById('restart')
 let gameBoard = document.getElementById('gameBoard')
 let cells = document.querySelectorAll('[data-cell]')
 let message = document.getElementById('message')
-let gameactive = true;
 let winningConditions = [
     [0, 1, 2],
     [3, 4, 5],

@@ -1,6 +1,7 @@
 let currentUserTodoList
 let currentUser = []
 let fullname = document.getElementById('fullname')
+let greetings = document.getElementById('greetings')
 let email = document.getElementById('email')
 let password = document.getElementById('password')
 let passwordConfirmation = document.getElementById('passwordConfirmation')
@@ -16,6 +17,7 @@ let loginButton = document.getElementById('loginButton')
 let addTodoButton = document.getElementById('addtodo')
 let registerbutton = document.getElementById('register')
 let fullnameVText = document.querySelector('.fullname.validation')
+let emailVText = document.querySelector('.email.validation')
 let passwordVText = document.querySelector('.password.validation')
 let passwordVerificationText = document.querySelector('.confirm.validation')
 let loginSpan = document.querySelector('.login-span')
@@ -48,7 +50,7 @@ function registerUser() {
     }
 
     if (fullname.value.length < 3) {
-        fullnameVText.textContent = 'invalid'
+        fullnameVText.textContent = "name's too short"
         fullnameVText.style.color = 'red'
         return
     } else {
@@ -56,8 +58,17 @@ function registerUser() {
         fullnameVText.style.color = 'Green'
     }
 
+    if (email.value.includes('@') === false || email.value.includes('.com') === false) {
+        emailVText.textContent = "Invalid email address"
+        emailVText.style.color = 'red'
+        return
+    } else {
+        emailVText.textContent = 'Good'
+        emailVText.style.color = 'Green'
+    }
+
     if (password.value.length < 4) {
-        passwordVText.textContent = "Bad"
+        passwordVText.textContent = "password's too short"
         passwordVText.style.color = 'red'
         return
     } else {
@@ -66,7 +77,7 @@ function registerUser() {
     }
 
     if (passwordConfirmation.value !== password.value || passwordConfirmation.value === "") {
-        passwordVerificationText.textContent = 'invalid'
+        passwordVerificationText.textContent = 'unmatched password'
         passwordVerificationText.style.color = 'red'
         return
     } else {
@@ -76,21 +87,23 @@ function registerUser() {
 
     usersArray.push(newUser)
     localStorage.setItem(`usersarray`, JSON.stringify(usersArray));
-    usersArray = JSON.parse(localStorage.getItem(`usersarray`))
-    loginPage.style.display = 'flex'
-    registerPage.style.display = 'none'
 
-    fullname.value = "";
-    email.value = "";
-    password.value = "";
-    passwordConfirmation.value = "";
+    function changePage() {
+        loginPage.style.display = 'flex'
+        registerPage.style.display = 'none'
+        fullname.value = "";
+        email.value = "";
+        password.value = "";
+        passwordConfirmation.value = "";
 
-    fullnameVText.textContent = ""
-    passwordVerificationText.textContent = ""
-    passwordVText.textContent = ""
-
-
+        fullnameVText.textContent = ""
+        passwordVerificationText.textContent = ""
+        passwordVText.textContent = ""
+        emailVText.textContent = ""
+    }
+    setTimeout(changePage, 500)
 }
+
 // login details check
 function confirmLogin() {
     for (let i = 0; i < usersArray.length; i++) {
@@ -102,26 +115,56 @@ function confirmLogin() {
     }
 }
 
+
+function displayCurrentTodoItems() {
+    for (let j = 0; j < currentUserTodoList.length; j++) {
+        if (currentUserTodoList[j].todoChecked === 'checked') {
+            ul.innerHTML += `<li class ='checked' data-id="${currentUserTodoList[j].todoID}">${currentUserTodoList[j].todoTitle}<span class='del'>X</span><span class="more">....</span></li>`
+        }
+        else {
+            ul.innerHTML += `<li data-id="${currentUserTodoList[j].todoID}">${currentUserTodoList[j].todoTitle}<span class='del' >X</span><span class="more">....</span></li>`
+        }
+    }
+    deleting()
+}
+
+// localStorage.clear()
+function deleting() {
+    for (let k = 0; k < dlt.length; k++) {
+        dlt[k].addEventListener('click', function () {
+            let id = this.parentElement.getAttribute('data-id')
+            this.parentElement.remove()
+            console.log(id)
+            for (let s = 0; s < currentUser.todoArray.length; s++) {
+                if (currentUser.todoArray[s].todoID === id) {
+                    currentUser.todoArray = currentUser.todoArray.slice(0, s).concat(currentUser.todoArray.slice(s + 1))
+                    console.table(currentUser.todoArray)
+                    localStorage.setItem(`usersarray`, JSON.stringify(usersArray));
+                }
+            }
+        })
+    }
+}
+
+function generateId() {
+    let id = String(Math.floor(Math.random() * 10)) + String(Math.floor(Math.random() * 10)) + String(Math.floor(Math.random() * 10)) + String(Math.floor(Math.random() * 10)) + String(Math.floor(Math.random() * 10))
+    return id
+}
+
 // the login confirmation
 function login() {
     if (confirmLogin()) {
         logPassword.value = ""
         loginPage.style.display = 'none'
         todocontainer.style.display = 'flex'
-
-        for (let j = 0; j < currentUserTodoList.length; j++) {
-            ul.innerHTML += `<li>${currentUserTodoList[j].todoTitle}<span class='del'>X</span><span class="more">....</span></li>`
-            for (let k = 0; k < dlt.length; k++) {
-                dlt[k].addEventListener('click', function () {
-                    this.parentElement.remove()
-                })
-            }
-        }
+        greetings.textContent = `WELLCOME ${currentUser.fullname}`
+        displayCurrentTodoItems()
     } else {
         alert('invalid login details')
     }
 }
 
+// localStorage.clear()
 // responsible for adding more todo to the todo list
 function addTodo() {
     if (todoItem.value === "") {
@@ -134,28 +177,27 @@ function addTodo() {
         todoDate: date.value,
         todoDescription: description.value,
         todoCategory: category.value,
-        todoID: 0
+        todoID: generateId(),
+        todoChecked: null
     }
 
-    ul.innerHTML += `<li>${todoObject.todoTitle}<span class='del'>X</span><span class="more">....</span></li>`
     currentUserTodoList.push(todoObject)
+
+    if (todoObject.todoTitle.length > 30) {
+        todoObject.todoTitle = todoObject.todoTitle.slice(0, 30) + '.......'
+    }
+    ul.innerHTML += `<li  data-id="${todoObject.todoID}">${todoObject.todoTitle}<span class='del'>X</span><span class="more">....</span></li>`
+    deleting()
+ 
     localStorage.setItem(`usersarray`, JSON.stringify(usersArray))
 
-    for (let i = 0; i < dlt.length; i++) {
-        dlt[i].addEventListener('click', function () {
-            this.parentElement.remove()
-            // currentUserTodoList.splice(currentUserTodoList[i], 1)
-        })
-    }
     // clear the input boxes after saving
     todoItem.value = ""
     date.value = ""
     description.value = ""
     category.value = ""
-    console.clear()
-    console.table(currentUserTodoList)
-
 }
+
 
 addTodoButton.addEventListener('click', addTodo)
 loginButton.addEventListener('click', login)
@@ -180,7 +222,26 @@ registerSpan.addEventListener('click', () => {
 
 // responsible for marking the finished todo tasks
 ul.addEventListener('click', (e) => {
-    if (e.target.tagName === 'LI') {
-        e.target.classList.toggle('checked');
+    let target = e.target;
+    let targetID = target.getAttribute('data-id')
+    if (target.tagName === 'LI' && target.classList.contains('checked')) {
+        target.classList.remove('checked')
+    } else if (target.tagName === 'LI' && target.classList.contains('checked') === false) {
+        target.classList.add('checked')
     }
+    checker(targetID)
+    localStorage.setItem(`usersarray`, JSON.stringify(usersArray));
 })
+
+function checker(targetID) {
+    for (let i = 0; i < currentUserTodoList.length; i++) {
+        if (currentUserTodoList[i].todoID === targetID) {
+            // console.log(currentUserTodoList[i].todoChecked)
+            if (currentUserTodoList[i].todoChecked === null) {
+                currentUserTodoList[i].todoChecked = 'checked'
+            } else {
+                currentUserTodoList[i].todoChecked = null;
+            }
+        }
+    }
+}

@@ -72,7 +72,7 @@ body {
   bottom: 20px;
 }
 
-H1 {
+h1 {
   font-size: 30px;
   text-shadow: 2px 2px 5px white;
   margin: 20px;
@@ -133,6 +133,7 @@ form {
 
 ul {
   overflow-y: scroll;
+  overflow-x: hidden;
   width: 94%;
   margin-top: 20px;
   font-size: 20px;
@@ -172,7 +173,8 @@ option {
 .validation {
   height: 20px;
   color: green;
-  margin-left: -30%;
+  width: 60%;
+  margin-left: 22%;
 }
 
 button {
