@@ -119,10 +119,10 @@ function confirmLogin() {
 function displayCurrentTodoItems() {
     for (let j = 0; j < currentUserTodoList.length; j++) {
         if (currentUserTodoList[j].todoChecked === 'checked') {
-            ul.innerHTML += `<li class ='checked' data-id="${currentUserTodoList[j].todoID}">${currentUserTodoList[j].todoTitle}<span class='del'>X</span><span class="more">....</span></li>`
+            ul.innerHTML += `<li class ='checked' data-id="${currentUserTodoList[j].todoID}">${currentUserTodoList[j].todoTitle}<span class='del'>X</span><span class="more">...</span></li>`
         }
         else {
-            ul.innerHTML += `<li data-id="${currentUserTodoList[j].todoID}">${currentUserTodoList[j].todoTitle}<span class='del' >X</span><span class="more">....</span></li>`
+            ul.innerHTML += `<li data-id="${currentUserTodoList[j].todoID}">${currentUserTodoList[j].todoTitle}<span class='del' >X</span><span class="more">...</span></li>`
         }
     }
     deleting()
@@ -186,7 +186,7 @@ function addTodo() {
     if (todoObject.todoTitle.length > 30) {
         todoObject.todoTitle = todoObject.todoTitle.slice(0, 30) + '.......'
     }
-    ul.innerHTML += `<li  data-id="${todoObject.todoID}">${todoObject.todoTitle}<span class='del'>X</span><span class="more">....</span></li>`
+    ul.innerHTML += `<li  data-id="${todoObject.todoID}">${todoObject.todoTitle}<span class='del'>X</span><span class="more">...</span></li>`
     deleting()
  
     localStorage.setItem(`usersarray`, JSON.stringify(usersArray))
